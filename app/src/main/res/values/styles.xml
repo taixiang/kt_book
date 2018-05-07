@@ -1,0 +1,178 @@
+<resources>
+
+    <style name="Base.SwipeBack.AppTheme" parent="Base.AppTheme">
+        <!--页面Activity跳转的样式-->
+        <item name="android:windowAnimationStyle">@style/Animation.Activity.Style</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Base.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#f3f3f3</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--页面Activity跳转的样式-->
+        <item name="android:windowAnimationStyle">@style/Animation.Activity.Style</item>
+        <item name="toolbarStyle">@style/CustomToolbar</item>
+    </style>
+
+    <style name="CustomToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item><!-- 设置该属性解决空白部分-->
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.SwipeBack.AppTheme">
+        <!--<style name="AppTheme" parent="Base.AppTheme">-->
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <!--默认Activity页面切换样式-->
+    <style name="Animation.Activity.Style" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/base_stay_orig</item>
+        <item name="android:activityCloseEnterAnimation">@anim/base_stay_orig</item>
+        <item name="android:activityCloseExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:taskOpenEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:taskOpenExitAnimation">@anim/base_stay_orig</item>
+        <item name="android:taskCloseEnterAnimation">@anim/base_stay_orig</item>
+        <item name="android:taskCloseExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:taskToFrontExitAnimation">@anim/base_stay_orig</item>
+        <item name="android:taskToBackEnterAnimation">@anim/base_stay_orig</item>
+        <item name="android:taskToBackExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:fragmentOpenEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:fragmentOpenExitAnimation">@anim/base_stay_orig</item>
+        <item name="android:fragmentCloseEnterAnimation">@anim/base_stay_orig</item>
+        <item name="android:fragmentCloseExitAnimation">@anim/base_slide_right_out</item>
+    </style>
+
+    <!--支持滑动结束Activity页面的切换样式-->
+    <style name="Animation.Activity.Translucent.Style" parent="@android:style/Animation.Translucent">
+        <item name="android:windowEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:windowExitAnimation">@anim/base_slide_right_out</item>
+
+        <item name="android:activityOpenEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/base_stay_orig</item>
+        <item name="android:activityCloseEnterAnimation">@anim/base_stay_orig</item>
+        <item name="android:activityCloseExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:taskOpenEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:taskOpenExitAnimation">@anim/base_stay_orig</item>
+        <item name="android:taskCloseEnterAnimation">@anim/base_stay_orig</item>
+        <item name="android:taskCloseExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:taskToFrontExitAnimation">@anim/base_stay_orig</item>
+        <item name="android:taskToBackEnterAnimation">@anim/base_stay_orig</item>
+        <item name="android:taskToBackExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:fragmentOpenEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:fragmentOpenExitAnimation">@anim/base_stay_orig</item>
+        <item name="android:fragmentCloseEnterAnimation">@anim/base_stay_orig</item>
+        <item name="android:fragmentCloseExitAnimation">@anim/base_slide_right_out</item>
+
+
+    </style>
+    <!--通用的编辑框的样式-->
+    <style name="EditTextStyle">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <!--<item name="android:background">@drawable/edittext_border_background_shape</item>-->
+    </style>
+
+    <!--<style name="ButtonStyle">-->
+        <!--<item name="android:background">@drawable/button_selector</item>-->
+        <!--<item name="android:layout_height">48dp</item>-->
+        <!--<item name="android:layout_width">match_parent</item>-->
+        <!--<item name="android:gravity">center</item>-->
+        <!--<item name="android:textColor">@drawable/textview_textcolor_selector</item>-->
+
+    <!--</style>-->
+
+    <!--<style name="PhoneButtonStyle">-->
+        <!--<item name="android:background">@drawable/list_item_white_selector</item>-->
+        <!--<item name="android:layout_marginRight">0.5dp</item>-->
+        <!--<item name="android:layout_marginBottom">0.5dp</item>-->
+        <!--<item name="android:gravity">center</item>-->
+        <!--<item name="android:layout_height">48dp</item>-->
+    <!--</style>-->
+
+    <style name="SwitchTextAppearance" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">#FFFF0000</item>
+    </style>
+
+    <style name="ActualMoneyTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFE22828</item>
+    </style>
+
+    <style name="BackImageViewStyle" parent="AppTheme">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:scaleType">fitStart</item>
+        <item name="android:layout_width">?attr/actionBarSize</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+    </style>
+
+    <style name="PopupWindowStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/base_popup_top_in</item>
+        <item name="android:windowExitAnimation">@anim/base_popup_top_out</item>
+    </style>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+    </declare-styleable>
+
+    <!-- 分享对话框样式 -->
+    <style name="ShareDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <!-- <item name="android:background">@xml/tab_selector_checked_bg</item> -->
+    <style name="tab_rb_style_new">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <!--<item name="android:textColor">@drawable/ic_main_tab_font_selector</item>-->
+        <item name="android:gravity">center_horizontal|bottom</item>
+        <item name="android:layout_gravity">bottom</item>
+        <!-- <item name="android:background">@drawable/custom_tab_indicator</item> -->
+    </style>
+    <!--倒计时TextView-->
+    <declare-styleable name="TimeTextView">
+    </declare-styleable>
+
+    <!--<style name="roomRatingBar" parent="@android:style/Widget.RatingBar">-->
+        <!--<item name="android:progressDrawable">@drawable/room_rating_bar</item>-->
+        <!--<item name="android:minHeight">20dp</item>-->
+        <!--<item name="android:maxHeight">20dp</item>-->
+        <!--<item name="android:isIndicator">false</item>-->
+    <!--</style>-->
+
+    <!--<style name="goodDetialCommentRatingBar" parent="@android:style/Widget.RatingBar">-->
+        <!--<item name="android:progressDrawable">@drawable/detial_comment_rating_bar</item>-->
+        <!--<item name="android:minHeight">14dp</item>-->
+        <!--<item name="android:maxHeight">14dp</item>-->
+    <!--</style>-->
+</resources>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">丁书网二手书</string>
+
+    <!--登录失败时的提示语-->
+    <string name="tv_login_failured_msg">手机号或密码错误，请重新输入</string>
+
+
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">正在加载中...</string>
+    <string name="xlistview_footer_hint_onclick">点击加载</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="goods_num">库存%s件</string>
+
+
+</resources>
