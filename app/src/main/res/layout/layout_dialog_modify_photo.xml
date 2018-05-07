@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:id="@+id/linear_title_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="修改头像"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/linear_camera_container"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/list_item_white_selector"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="拍照"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFBFBFBF"/>
+
+    <LinearLayout
+        android:id="@+id/linear_gallery_container"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/list_item_white_selector"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="从图库选择"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFBFBFBF"/>
+
+    <LinearLayout
+        android:id="@+id/linear_cancel_container"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/list_item_white_selector"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="取消"/>
+    </LinearLayout>
+</LinearLayout>

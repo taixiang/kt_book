@@ -27,6 +27,7 @@ import java.io.InputStreamReader
 import java.io.OutputStream
 import java.net.HttpURLConnection
 import java.net.URL
+import java.nio.charset.Charset
 import java.util.concurrent.TimeUnit
 
 /**
@@ -85,11 +86,10 @@ object OkHttpUtils {
                         val intputstream = httpURLConnection.inputStream
                         var len = -1
                         val buffer = ByteArray(1024)
-                        val t = HTTP.UTF_8
                         do {
                             len = intputstream.read(buffer)
                             if (len != -1) {
-                                stringBuffer.append(String(buffer, 0, len, HTTP.UTF_8))
+                                stringBuffer.append(String(buffer, 0, len, Charset.forName("Utf-8")))
                             } else {
                                 break
                             }
