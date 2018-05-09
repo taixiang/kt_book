@@ -26,11 +26,11 @@ abstract class BaseTitleActivity : BaseActivity() {
         afterOnCreate(savedInstanceState)
     }
 
-    fun afterOnCreate(savedInstanceState: Bundle?) {
+    open fun afterOnCreate(savedInstanceState: Bundle?) {
         //        setSwipeBackEnable(false);
     }
 
-    abstract fun fragmentAsView(): BaseFragment
+    abstract fun fragmentAsView(): BaseFragment?
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
         super.onActivityResult(requestCode, resultCode, data)

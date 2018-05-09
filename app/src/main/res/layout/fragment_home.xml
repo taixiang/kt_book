@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_banner"
+                android:id="@+id/home_top_iv"
+                android:layout_width="match_parent"
+                android:layout_height="130dp" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="#e1d19d"
+                android:paddingTop="5dp"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_sao"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/sao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/et_mail"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/edit_shape"
+
+                        android:hint="搜索关键字"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:maxLines="1"
+                        android:textColor="#FF999999"
+                        android:textColorHint="#FF999999"
+                        android:textSize="14sp"/>
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_search"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/search1"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+
+
+                <TextView
+                    android:id="@+id/highs"
+                    android:text="高级"
+                    android:textSize="18sp"
+                    android:textColor="@color/theme_color"
+                    android:paddingRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <com.dingshuwang.view.CustomGridView
+                android:id="@+id/grid_column"
+                android:numColumns="4"
+                android:listSelector="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:background="@color/background_color"
+                android:verticalSpacing="0.5dp"
+                android:horizontalSpacing="0.5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/iv_share"
+                android:scaleType="fitXY"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="130dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="免"
+                        android:textColor="@color/red_txt"
+                        android:gravity="center"
+                        android:background="@drawable/txt_round"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="免费领取"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:text="更多..."
+                    android:textSize="15sp"
+                    android:textColor="@color/red_txt"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:background="@drawable/txt_round"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </RelativeLayout>
+
+
+            <com.dingshuwang.view.CustomGridView
+                android:id="@+id/grid_free"
+                android:numColumns="3"
+                android:listSelector="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:background="@color/background_color"
+                android:verticalSpacing="0.5dp"
+                android:horizontalSpacing="0.5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/iv_bottom"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="130dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

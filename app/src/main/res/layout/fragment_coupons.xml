@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <RadioButton
+            android:id="@+id/rb_able"
+            android:text="可用优惠券"
+            android:layout_width="0dp"
+            android:textColor="@drawable/coupons_selector"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:checked="true"
+            android:layout_height="match_parent" />
+
+        <RadioButton
+            android:id="@+id/rb_unable"
+            android:text="不可用优惠券"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@drawable/coupons_selector"
+            android:background="@color/white"
+
+            android:button="@null"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/able_listview"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+    <ListView
+        android:visibility="gone"
+        android:layout_margin="8dp"
+        android:id="@+id/unable_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

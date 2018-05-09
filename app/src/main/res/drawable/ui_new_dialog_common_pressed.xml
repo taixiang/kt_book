@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape android:shape="rectangle" >
+
+            <!-- 描边 -->
+            <stroke
+                android:width="0px"
+                android:color="#9c9c9c" />
+            <!-- 填充 -->
+            <solid android:color="#ff9f20" />
+            <!-- 圆角 -->
+            <!-- <corners android:radius="@dimen/ui_new_dimen_radius" /> -->
+        </shape>
+    </item>
+
+</layer-list>

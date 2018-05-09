@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/srl_hui_help"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/main_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="60.5dp"
+        android:background="@color/theme_color"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_01"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rlyBack"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="15dp" >
+
+                <ImageView
+                    android:id="@+id/imgReturn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:src="@mipmap/ic_back" >
+                </ImageView>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/bar_title_txt"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18sp" >
+            </TextView>
+
+            <ImageView
+                android:id="@+id/img_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" >
+            </ImageView>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/rl_01"
+            android:background="#D5D5D5" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/main_titlebar" />
+</RelativeLayout>

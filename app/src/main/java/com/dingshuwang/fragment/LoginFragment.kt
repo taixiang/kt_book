@@ -31,11 +31,11 @@ import butterknife.OnClick
 class LoginFragment : BaseFragment(), DataView {
 
     @BindView(R.id.et_name)
-    var et_name: EditText? = null
+    lateinit var et_name: EditText
     @BindView(R.id.et_password)
-    var et_password: EditText? = null
+    lateinit var et_password: EditText
     @BindView(R.id.et_code)
-    var et_code: EditText? = null
+    lateinit var et_code: EditText
 
     private var tag: Int = 0
 
