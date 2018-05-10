@@ -91,7 +91,7 @@ class UserAdapter(private val iv_id: IntArray, private val name: Array<String>, 
     }
 
     private inner class ViewHolder {
-        private val iv_logo: ImageView? = null
-        private val tv_name: TextView? = null
+        lateinit var  iv_logo: ImageView
+        lateinit var tv_name: TextView
     }
 }

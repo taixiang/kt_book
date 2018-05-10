@@ -32,12 +32,12 @@ import java.util.LinkedList
 class KeywordsListFragment : BaseFragment(), DataView {
 
     @BindView(R.id.xListView)
-    internal var xListView: XListView? = null
+    lateinit var xListView: XListView
 
     @BindView(R.id.search)
-    internal var search: ImageView? = null
+    lateinit var search: ImageView
     @BindView(R.id.et_mail)
-    internal var et_mail: EditText? = null
+    lateinit var et_mail: EditText
 
     private var adapter: KeywordsAdapter? = null
     private var currentPage = 0
@@ -127,7 +127,7 @@ class KeywordsListFragment : BaseFragment(), DataView {
             if (KEYWORD == requestTag) {
                 val search = GsonUtils.jsonToClass(result, SearchItem::class.java)
                 if (search!!.result == "true" && search.pros != null && search.pros!!.size > 0) {
-                    mList.addAll(search.pros)
+                    mList.addAll(search.pros!!)
                     Log.i("》》》》》  ", " mlist size == " + mList.size)
                     if (adapter == null) {
                         adapter = KeywordsAdapter(mList, mActivity)

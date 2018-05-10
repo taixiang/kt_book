@@ -89,7 +89,7 @@ class KeywordsAdapter(private val mList: List<SearchItem.Search>, private val mA
                 if (UIUtil.isfastdoubleClick()) {
                     return@OnClickListener
                 }
-                DetailActivity.actionDetail(mActivity, item.id)
+                DetailActivity.actionDetail(mActivity, item.id!!)
             })
             holder.ll_cart!!.setOnClickListener(View.OnClickListener {
                 if (UIUtil.isfastdoubleClick()) {

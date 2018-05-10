@@ -33,12 +33,12 @@ import com.dingshuwang.*
 class FindFragment : BaseFragment(), DataView {
 
     @BindView(R.id.xListView)
-    internal var xListView: XListView? = null
+    lateinit var xListView: XListView
 
     @BindView(R.id.et_mail)
-    internal var et_mail: EditText? = null
+    lateinit var et_mail: EditText
     @BindView(R.id.search)
-    internal var search: ImageView? = null
+    lateinit var search: ImageView
 
     private var findAdapter: FindAdapter? = null
     private val mList = LinkedList<FindItem.Find>()

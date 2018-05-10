@@ -11,7 +11,7 @@ class CollectListItem : Serializable {
     var favorites: List<CollectList>? = null
 
     inner class CollectList : Serializable {
-        var pro_id: String? = null
+        lateinit var pro_id: String
         var name: String? = null
         var ISBN: String? = null
         var img_url: String? = null

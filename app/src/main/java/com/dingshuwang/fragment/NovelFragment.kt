@@ -33,12 +33,12 @@ import java.util.LinkedList
 class NovelFragment : BaseFragment(), DataView {
 
     @BindView(R.id.xListView)
-    internal var xListView: XListView? = null
+    lateinit var xListView: XListView
 
     @BindView(R.id.search)
-    internal var search: ImageView? = null
+    lateinit var search: ImageView
     @BindView(R.id.et_mail)
-    internal var et_mail: EditText? = null
+    lateinit var et_mail: EditText
 
     private var adapter: NovelAdapter? = null
     private var currentPage = 0

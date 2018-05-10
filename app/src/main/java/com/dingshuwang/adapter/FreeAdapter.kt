@@ -64,7 +64,7 @@ class FreeAdapter(private val mList: List<HomeFreeItem.HomeFree>, private val mA
                 if (UIUtil.isfastdoubleClick()) {
                     return@OnClickListener
                 }
-                DetailActivity.actionDetail(mActivity, item.id)
+                DetailActivity.actionDetail(mActivity, item.id!!)
             })
         }
         return convertView

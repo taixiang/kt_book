@@ -21,10 +21,10 @@ import com.dingshuwang.util.RequestUtils
 class IsbnCodeFragment : BaseFragment(), DataView {
 
     @BindView(R.id.listview)
-    internal var listview: ListView? = null
+    lateinit var listview: ListView
 
     @BindView(R.id.tv_none)
-    internal var tv_none: TextView? = null
+    lateinit var tv_none: TextView
 
     private var isbn: String? = null
     private var searchAdapter: KeywordsAdapter? = null

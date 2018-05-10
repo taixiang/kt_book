@@ -50,7 +50,7 @@ class PayFragment : BaseFragment(), DataView {
     private val return_url = "http://www.iisbn.com/direct_pay/return_url.aspx"
 
     @BindView(R.id.ctv_alipay)
-    internal var ctv_alipay: CheckedTextView? = null
+    lateinit var ctv_alipay: CheckedTextView
 
     private var order_id: String? = null
     private var money: String? = null
@@ -58,38 +58,38 @@ class PayFragment : BaseFragment(), DataView {
     private var body: String? = null
 
     @BindView(R.id.tv_order_no)
-    internal var tv_order_no: TextView? = null
+    lateinit var tv_order_no: TextView
 
     @BindView(R.id.tv_real_amount)
-    internal var tv_real_amount: TextView? = null
+    lateinit var tv_real_amount: TextView
     @BindView(R.id.tv_express_fee)
-    internal var tv_express_fee: TextView? = null
+    lateinit var tv_express_fee: TextView
     @BindView(R.id.tv_point)
-    internal var tv_point: TextView? = null
+    lateinit var tv_point: TextView
     @BindView(R.id.tv_groups_favourable)
-    internal var tv_groups_favourable: TextView? = null
+    lateinit var tv_groups_favourable: TextView
 
     @BindView(R.id.tv_pay)
-    internal var tv_pay: TextView? = null
+    lateinit var tv_pay: TextView
 
     @BindView(R.id.tv_address)
-    internal var tv_address: TextView? = null
+    lateinit var tv_address: TextView
     @BindView(R.id.tv_name)
-    internal var tv_name: TextView? = null
+    lateinit var tv_name: TextView
     @BindView(R.id.tv_phone)
-    internal var tv_phone: TextView? = null
+    lateinit var tv_phone: TextView
     @BindView(R.id.tv_order)
-    internal var tv_order: TextView? = null
+    lateinit var tv_order: TextView
     @BindView(R.id.tv_way)
-    internal var tv_way: TextView? = null
+    lateinit var tv_way: TextView
 
     @BindView(R.id.order_status)
-    internal var order_status: TextView? = null
+    lateinit var order_status: TextView
 
     @BindView(R.id.btn_ok)
-    internal var btn_ok: Button? = null
+    lateinit var btn_ok: Button
     @BindView(R.id.pay_contain)
-    internal var pay_contain: LinearLayout? = null
+    lateinit var pay_contain: LinearLayout
 
     override val fragmentTitle: String
         get() = ""

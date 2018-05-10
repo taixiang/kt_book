@@ -86,9 +86,10 @@ object Constants{
 
     val LOGIN = 200 //登陆返回当前页面
 
+    @JvmField
     val CAMMER = 300 //首页扫描isbn返回 resultcode
 
-    val CAMMER_PUBLISH = 600 //发布扫描isbn返回 resultcode
+    @JvmField val CAMMER_PUBLISH = 600 //发布扫描isbn返回 resultcode
 
     val CODE_PUBLISH = 400 //发布扫描返回 request
 

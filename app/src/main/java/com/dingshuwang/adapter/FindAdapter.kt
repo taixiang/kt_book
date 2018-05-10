@@ -64,7 +64,7 @@ class FindAdapter(private val mList: List<FindItem.Find>?, private val mActivity
                 if (UIUtil.isfastdoubleClick()) {
                     return@OnClickListener
                 }
-                DetailActivity.actionDetail(mActivity, item.pro_id)
+                DetailActivity.actionDetail(mActivity, item.pro_id!!)
             })
         }
         return convertView

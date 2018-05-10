@@ -40,21 +40,21 @@ import butterknife.OnClick
 class HomeFragment : BaseFragment(), DataView {
 
     @BindView(R.id.grid_column)
-    internal var grid_column: CustomGridView? = null
+    lateinit var grid_column: CustomGridView
 
     @BindView(R.id.grid_free)
-    internal var grid_free: CustomGridView? = null
+    lateinit var grid_free: CustomGridView
 
     @BindView(R.id.iv_share)
-    internal var iv_share: ImageView? = null
+    lateinit var iv_share: ImageView
 
     @BindView(R.id.iv_bottom)
-    internal var iv_bottom: ImageView? = null
+    lateinit var iv_bottom: ImageView
 
     @BindView(R.id.et_mail)
-    internal var et_mail: EditText? = null
+    lateinit var et_mail: EditText
     @BindView(R.id.iv_search)
-    internal var iv_search: ImageView? = null
+    lateinit var iv_search: ImageView
 
     private var columnAdapter: ColumnAdapter? = null
     private var freeAdapter: FreeAdapter? = null
@@ -62,7 +62,7 @@ class HomeFragment : BaseFragment(), DataView {
     private var homeBottomItem: HomeMiddleItem? = null
 
     override val fragmentTitle: String
-        get() = null
+        get() = ""
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_home, null)

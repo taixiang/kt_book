@@ -65,7 +65,7 @@ class ColumnAdapter(private val mList: List<HomeMiddleItem.HomeMiddle>?, private
             if ("小说专区" == item.keywords) {
                 NovelActivity.actionNovel(mActivity)
             } else {
-                KeywordsListActivity.actionKeywordsList(mActivity, item.keywords)
+                KeywordsListActivity.actionKeywordsList(mActivity, item.keywords!!)
             }
         })
 

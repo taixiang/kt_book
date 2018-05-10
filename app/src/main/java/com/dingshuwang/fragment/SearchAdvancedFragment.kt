@@ -28,16 +28,16 @@ import butterknife.OnClick
 class SearchAdvancedFragment : BaseFragment(), DataView {
 
     @BindView(R.id.et_name)
-    internal var et_name: EditText? = null
+    lateinit var et_name: EditText
     @BindView(R.id.et_author)
-    internal var et_author: EditText? = null
+    lateinit var et_author: EditText
     @BindView(R.id.et_isbn)
-    internal var et_isbn: EditText? = null
+    lateinit var et_isbn: EditText
     @BindView(R.id.et_publish)
-    internal var et_publish: EditText? = null
+    lateinit var et_publish: EditText
 
     @BindView(R.id.tv_search)
-    internal var tv_search: TextView? = null
+    lateinit var tv_search: TextView
 
     override val fragmentTitle: String
         get() = ""

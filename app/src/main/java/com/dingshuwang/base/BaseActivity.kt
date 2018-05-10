@@ -33,7 +33,7 @@ import butterknife.ButterKnife
  */
 abstract class BaseActivity : AppCompatActivity(), IActivityTitle {
     companion object {
-        protected lateinit var mActivity: BaseActivity
+        lateinit var mActivity: BaseActivity
     }
 
     private var mProgressDialog: ProgressDialog? = null

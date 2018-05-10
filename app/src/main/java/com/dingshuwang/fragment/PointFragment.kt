@@ -26,10 +26,10 @@ import com.dingshuwang.util.StringUtils
 class PointFragment : BaseFragment(), DataView {
 
     @BindView(R.id.listview)
-    internal var listView: ListView? = null
+    lateinit var listView: ListView
 
     @BindView(R.id.tv_point)
-    internal var tv_point: TextView? = null
+    lateinit var tv_point: TextView
 
     override val fragmentTitle: String
         get() = ""

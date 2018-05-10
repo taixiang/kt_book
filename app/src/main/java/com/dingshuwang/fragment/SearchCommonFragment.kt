@@ -43,14 +43,14 @@ import butterknife.OnClick
 class SearchCommonFragment : BaseFragment(), DataView {
 
     @BindView(R.id.xListView)
-    internal var xListView: XListView? = null
+    lateinit var xListView: XListView
 
     @BindView(R.id.search)
-    internal var search: ImageView? = null
+    lateinit var search: ImageView
     @BindView(R.id.et_mail)
-    internal var et_mail: EditText? = null
+    lateinit var et_mail: EditText
     @BindView(R.id.iv_back)
-    internal var iv_back: ImageView? = null
+    lateinit var iv_back: ImageView
 
     private var adapter: KeywordsAdapter? = null
     private var currentPage = 0

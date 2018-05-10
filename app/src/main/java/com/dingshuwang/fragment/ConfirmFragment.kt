@@ -50,54 +50,53 @@ class ConfirmFragment : BaseFragment(), DataView {
 
 
     @BindView(R.id.tv_add_address)
-    internal var tv_add_address: TextView? = null
+    lateinit var tv_add_address: TextView
     @BindView(R.id.container)
-    internal var container: LinearLayout? = null
+    lateinit var container: LinearLayout
     @BindView(R.id.tv_name)
-    internal var tv_name: TextView? = null
+    lateinit var tv_name: TextView
     @BindView(R.id.tv_phone)
-    internal var tv_phone: TextView? = null
+    lateinit var tv_phone: TextView
     @BindView(R.id.tv_address)
-    internal var tv_address: TextView? = null
+    lateinit var tv_address: TextView
 
     @BindView(R.id.gridView)
-    internal var gridView: CustomGridView? = null
+    lateinit var gridView: CustomGridView
 
     @BindView(R.id.tv_goods_num)
-    internal var tv_goods_num: TextView? = null
+    lateinit var tv_goods_num: TextView
     @BindView(R.id.tv_price)
-    internal var tv_price: TextView? = null
+    lateinit var tv_price: TextView
     @BindView(R.id.tv_exp_price)
-    internal var tv_exp_price: TextView? = null
+    lateinit var tv_exp_price: TextView
 
     @BindView(R.id.rg_supplier)
-    internal var rg: RadioGroup? = null
+    lateinit var rg: RadioGroup
 
     @BindView(R.id.exp_shunf)
-    internal var exp_shunf: RadioButton? = null
+    lateinit var exp_shunf: RadioButton
 
     @BindView(R.id.exp_putong)
-    internal var exp_putong: RadioButton? = null
+    lateinit var exp_putong: RadioButton
 
     @BindView(R.id.exp_youzheng)
-    internal var exp_youzheng: RadioButton? = null
+    lateinit var exp_youzheng: RadioButton
 
     @BindView(R.id.tv_point)
-    internal var tv_point: TextView? = null
+    lateinit var tv_point: TextView
     @BindView(R.id.tv_coupons)
-    internal var tv_coupons: TextView? = null
+    lateinit var tv_coupons: TextView
     @BindView(R.id.ll_coupons)
-    internal var ll_coupons: LinearLayout? = null
+    lateinit var ll_coupons: LinearLayout
     @BindView(R.id.tv_total_price)
-    internal var tv_total_price: TextView? = null
+    lateinit var tv_total_price: TextView
 
     @BindView(R.id.rg_orderType)
-    internal var rg_orderType: RadioGroup? = null
+    lateinit var rg_orderType: RadioGroup
     @BindView(R.id.order_common)
-    internal var order_common: RadioButton? = null
+    lateinit var order_common: RadioButton
     @BindView(R.id.order_share)
-    internal var order_share: RadioButton? = null
-
+    lateinit var order_share: RadioButton
     private var address_id: String? = null
 
     private var money: String? = null
@@ -318,7 +317,7 @@ class ConfirmFragment : BaseFragment(), DataView {
                 val orderItem = GsonUtils.jsonToClass(result, OrderItem::class.java)
                 if (null != orderItem) {
                     if (orderItem.result == "true") {
-                        PayActivity.actConfirm(mActivity, orderItem.message)
+                        PayActivity.actConfirm(mActivity, orderItem.message!!)
                         mActivity.finish()
                     } else {
                         mActivity.showToast(orderItem.message!!)

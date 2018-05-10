@@ -78,7 +78,7 @@ class NovelAdapter : BaseAdapter {
                 if (UIUtil.isfastdoubleClick()) {
                     return@OnClickListener
                 }
-                DetailActivity.actionDetail(mActivity, item.id)
+                DetailActivity.actionDetail(mActivity, item.id!!)
             })
         }
         return convertView

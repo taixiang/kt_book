@@ -41,14 +41,14 @@ import butterknife.OnClick
 class SearchFindFragment : BaseFragment(), DataView {
 
     @BindView(R.id.xListView)
-    internal var xListView: XListView? = null
+    lateinit var xListView: XListView
 
     @BindView(R.id.search)
-    internal var search: ImageView? = null
+    lateinit var search: ImageView
     @BindView(R.id.et_mail)
-    internal var et_mail: EditText? = null
+    lateinit var et_mail: EditText
     @BindView(R.id.iv_back)
-    internal var iv_back: ImageView? = null
+    lateinit var iv_back: ImageView
 
     private var adapter: FindAdapter? = null
     private var currentPage = 0
@@ -58,7 +58,7 @@ class SearchFindFragment : BaseFragment(), DataView {
 
 
     override val fragmentTitle: String
-        get() = null
+        get() = ""
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -149,7 +149,7 @@ class SearchFindFragment : BaseFragment(), DataView {
             if (SEARCH_KEY == requestTag) {
                 val findItem = GsonUtils.jsonToClass(result, FindItem::class.java)
                 if (findItem != null && findItem.result != null && findItem.result == "true" && findItem.pros != null && findItem.pros!!.size > 0) {
-                    mList.addAll(findItem.pros)
+                    mList.addAll(findItem.pros!!)
                     Log.i("》》》》》  ", " mlist size == " + mList.size)
                     if (adapter == null) {
                         adapter = FindAdapter(mList, mActivity)

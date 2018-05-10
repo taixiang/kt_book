@@ -38,13 +38,13 @@ import butterknife.OnClick
 class ShoppingCartFragment : BaseFragment(), DataView {
 
     @BindView(R.id.listview)
-    internal var listView: ListView? = null
+    lateinit var listView: ListView
 
     @BindView(R.id.tv_money)
-    internal var tv_money: TextView? = null
+    lateinit var tv_money: TextView
 
     @BindView(R.id.tv_empty)
-    internal var tv_empty: TextView? = null
+    lateinit var tv_empty: TextView
 
     private var adapter: ShopcartAdapter? = null
     private var cartItem: ShopCartItem? = null

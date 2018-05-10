@@ -27,17 +27,17 @@ import com.dingshuwang.util.RequestUtils
 class CouponsFragment : BaseFragment(), DataView {
 
     @BindView(R.id.able_listview)
-    internal var ableListView: ListView? = null
+    lateinit var ableListView: ListView
 
     @BindView(R.id.unable_listview)
-    internal var unableListView: ListView? = null
+    lateinit var unableListView: ListView
 
     @BindView(R.id.rg)
-    internal var radioGroup: RadioGroup? = null
+    lateinit var radioGroup: RadioGroup
     @BindView(R.id.rb_able)
-    internal var rb_able: RadioButton? = null
+    lateinit var rb_able: RadioButton
     @BindView(R.id.rb_unable)
-    internal var rb_unable: RadioButton? = null
+    lateinit var rb_unable: RadioButton
 
     override val fragmentTitle: String
         get() = ""

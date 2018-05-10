@@ -1,11 +1,6 @@
 package com.dingshuwang.fragment
 
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,7 +16,6 @@ import com.dingshuwang.APIURL
 import com.dingshuwang.Constants
 import com.dingshuwang.DataView
 import com.dingshuwang.LoginActivity
-import com.dingshuwang.MainActivity
 import com.dingshuwang.R
 import com.dingshuwang.ShopCartActivity
 import com.dingshuwang.adapter.CommentAdapter
@@ -37,7 +31,6 @@ import com.dingshuwang.util.GsonUtils
 import com.dingshuwang.util.RequestUtils
 import com.dingshuwang.util.UIUtil
 import com.dingshuwang.view.CustomListView
-import com.dingshuwang.view.XListView
 
 import butterknife.OnClick
 
@@ -49,48 +42,48 @@ class DetailFragment : BaseFragment(), DataView, View.OnClickListener {
 
 
     @BindView(R.id.iv_logo)
-    internal var iv_logo: ImageView? = null
+    lateinit var iv_logo: ImageView
     @BindView(R.id.tv_name)
-    internal var tv_name: TextView? = null
+    lateinit var tv_name: TextView
 
     @BindView(R.id.iv_minus)
-    internal var iv_minus: ImageView? = null
+    lateinit var iv_minus: ImageView
     @BindView(R.id.tv_count)
-    internal var tv_count: TextView? = null
+    lateinit var tv_count: TextView
     @BindView(R.id.iv_add)
-    internal var iv_add: ImageView? = null
+    lateinit var iv_add: ImageView
 
     @BindView(R.id.tv_isbn)
-    internal var tv_isbn: TextView? = null
+    lateinit var tv_isbn: TextView
     @BindView(R.id.tv_price_sell)
-    internal var tv_price_sell: TextView? = null
+    lateinit var tv_price_sell: TextView
     @BindView(R.id.goods_nums) //库存
-    internal var goods_nums: TextView? = null
+    lateinit var goods_nums: TextView
     @BindView(R.id.tv_sale_nums)
-    internal var tv_sale_nums: TextView? = null
+    lateinit var tv_sale_nums: TextView
 
     @BindView(R.id.webView)
-    internal var webView: WebView? = null
+    lateinit var webView: WebView
     @BindView(R.id.listview)
-    internal var listView: CustomListView? = null
+    lateinit var listView: CustomListView
 
     @BindView(R.id.tv_info)
-    internal var tv_info: TextView? = null
+    lateinit var tv_info: TextView
 
     @BindView(R.id.rg)
-    internal var radioGroup: RadioGroup? = null
+    lateinit var radioGroup: RadioGroup
     @BindView(R.id.rb_detail)
-    internal var rb_detail: RadioButton? = null
+    lateinit var rb_detail: RadioButton
     @BindView(R.id.rb_comment)
-    internal var rb_comment: RadioButton? = null
+    lateinit var rb_comment: RadioButton
 
     @BindView(R.id.com_container)
-    internal var com_container: LinearLayout? = null
+    lateinit var com_container: LinearLayout
 
     @BindView(R.id.iv_collect)
-    internal var iv_collect: ImageView? = null
+    lateinit var iv_collect: ImageView
     @BindView(R.id.tv_collect)
-    internal var tv_collect: TextView? = null
+    lateinit var tv_collect: TextView
     private var count = 0
     private var sell_count: Int = 0
     private var id: String? = null

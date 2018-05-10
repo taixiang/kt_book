@@ -52,7 +52,6 @@ import com.xys.libzxing.zxing.activity.CaptureActivity
 
 import java.io.File
 
-import butterknife.Bind
 import butterknife.BindView
 import butterknife.OnClick
 
@@ -63,42 +62,42 @@ import butterknife.OnClick
 class PublishFragment : BaseFragment(), DataView, AMapLocationListener, LocationSource {
 
     @BindView(R.id.et_isbn)
-    internal var et_isbn: EditText? = null
+    lateinit var et_isbn: EditText
     @BindView(R.id.et_name)
-    internal var et_name: EditText? = null
+    lateinit var et_name: EditText
     @BindView(R.id.et_author)
-    internal var et_author: EditText? = null
+    lateinit var et_author: EditText
     @BindView(R.id.et_publish)
-    internal var et_publish: EditText? = null
+    lateinit var et_publish: EditText
     @BindView(R.id.et_original)
-    internal var et_original: EditText? = null
+    lateinit var et_original: EditText
     @BindView(R.id.et_price)
-    internal var et_price: EditText? = null
+    lateinit var et_price: EditText
     @BindView(R.id.et_count)
-    internal var et_count: EditText? = null
+    lateinit var et_count: EditText
     @BindView(R.id.et_status)
-    internal var et_status: EditText? = null
+    lateinit var et_status: EditText
     @BindView(R.id.et_remark)
-    internal var et_remark: EditText? = null
+    lateinit var et_remark: EditText
 
     @BindView(R.id.et_linkname)
-    internal var et_linkname: EditText? = null
+    lateinit var et_linkname: EditText
     @BindView(R.id.et_phone)
-    internal var et_phone: EditText? = null
+    lateinit var et_phone: EditText
     @BindView(R.id.et_school)
-    internal var et_school: EditText? = null
+    lateinit var et_school: EditText
 
     @BindView(R.id.iv_zxing)
-    internal var iv_zxing: ImageView? = null
+    lateinit var iv_zxing: ImageView
     @BindView(R.id.iv_photo)
-    internal var iv_photo: ImageView? = null
+    lateinit var iv_photo: ImageView
     @BindView(R.id.container)
-    internal var container: LinearLayout? = null
+    lateinit var container: LinearLayout
     @BindView(R.id.tv_add_photo)
-    internal var tv_add_photo: TextView? = null
+    lateinit var tv_add_photo: TextView
 
     @BindView(R.id.mapView)
-    internal var mapView: MapView? = null
+    lateinit var mapView: MapView
 
     private val type = "0"
     private val strs = arrayOf("全新品", " 二手品—非常好", " 二手品—好", " 二手品—可接受", " 二手品—笔记较多")
@@ -107,7 +106,7 @@ class PublishFragment : BaseFragment(), DataView, AMapLocationListener, Location
     private var aMap: AMap? = null
     private var location = ""
 
-    private var mListener: OnLocationChangedListener? = null
+    private var mListener: LocationSource.OnLocationChangedListener? = null
     private var mlocationClient: AMapLocationClient? = null
     private var mLocationOption: AMapLocationClientOption? = null
 
@@ -378,12 +377,12 @@ class PublishFragment : BaseFragment(), DataView, AMapLocationListener, Location
     /**
      * 定位成功后回调函数
      */
-    fun onLocationChanged(amapLocation: AMapLocation?) {
+    override fun onLocationChanged(amapLocation: AMapLocation?) {
         Log.i("》》》》  ", "  locationchanged ")
         if (mListener != null && amapLocation != null) {
             if (amapLocation != null && amapLocation!!.getErrorCode() === 0) {
                 mListener!!.onLocationChanged(amapLocation)// 显示系统小蓝点
-                aMap!!.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(amapLocation!!.getLatitude(), amapLocation!!.getLongitude()), 19))
+                aMap!!.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(amapLocation!!.getLatitude(), amapLocation!!.getLongitude()), 19F))
                 location = amapLocation!!.getAddress()
                 Log.i("  》》》》》  ", "address === $location")
             } else {
@@ -396,7 +395,7 @@ class PublishFragment : BaseFragment(), DataView, AMapLocationListener, Location
     /**
      * 激活定位
      */
-    fun activate(onLocationChangedListener: OnLocationChangedListener) {
+    override fun activate(onLocationChangedListener: LocationSource.OnLocationChangedListener) {
         Log.i("》》》》  ", "  acyivated ")
         mListener = onLocationChangedListener
         if (mlocationClient == null) {
@@ -418,7 +417,7 @@ class PublishFragment : BaseFragment(), DataView, AMapLocationListener, Location
         }
     }
 
-    fun deactivate() {
+    override fun deactivate() {
         mListener = null
         if (mlocationClient != null) {
             mlocationClient!!.stopLocation()

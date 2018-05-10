@@ -88,7 +88,7 @@ class TopayAdapter : BaseAdapter {
                             return@OnClickListener
                         }
 
-                        DetailActivity.actionDetail(activity, good[j].goods_id)
+                        DetailActivity.actionDetail(activity, good[j].goods_id!!)
                     })
                 }
 
@@ -97,7 +97,7 @@ class TopayAdapter : BaseAdapter {
                     if (UIUtil.isfastdoubleClick()) {
                         return@OnClickListener
                     }
-                    PayActivity.actConfirm(activity, items.Order!![i].id)
+                    PayActivity.actConfirm(activity, items.Order!![i].id!!)
                 })
                 if (type == 1) {
 

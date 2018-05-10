@@ -61,7 +61,7 @@ class AddressListAdapter(private val activity: BaseActivity, private val list: L
             if (UIUtil.isfastdoubleClick()) {
                 return@OnClickListener
             }
-            AddressEditActivity.actionAddressEdit(activity, list[position].id)
+            AddressEditActivity.actionAddressEdit(activity, list[position].id!!)
         })
 
         convertView.setOnClickListener(View.OnClickListener {

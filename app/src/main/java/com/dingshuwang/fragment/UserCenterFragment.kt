@@ -40,20 +40,20 @@ import butterknife.OnClick
 class UserCenterFragment : BaseFragment(), DataView {
 
     @BindView(R.id.tv_name)
-    internal var tv_name: TextView? = null
+    lateinit var tv_name: TextView
     @BindView(R.id.tv_id)
-    internal var tv_id: TextView? = null
+    lateinit var tv_id: TextView
     @BindView(R.id.tv_qiandao)
-    internal var tv_qiandao: TextView? = null
+    lateinit var tv_qiandao: TextView
 
     @BindView(R.id.gridView)
-    internal var gridView: GridView? = null
+    lateinit var gridView: GridView
     private val iv_ids = intArrayOf(R.mipmap.menu1, R.mipmap.menu3, R.mipmap.menu4, R.mipmap.menu5, R.mipmap.menu6, R.mipmap.menu2, R.mipmap.menu7, R.mipmap.menu8, R.mipmap.dfh)
     private val names = arrayOf("我的订单", "优惠券", "我的积分", "购物车", "我的收藏", "我的发布", "收货地址", "图书回收", "联系我们")
     private var userAdapter: UserAdapter? = null
 
     override val fragmentTitle: String
-        get() = null
+        get() = ""
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_me, null)

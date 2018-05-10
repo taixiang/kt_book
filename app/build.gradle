@@ -23,6 +23,10 @@ android {
     }
 }
 
+repositories {
+    mavenCentral() // jcenter() works as well because it pulls from Maven Central
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
@@ -35,4 +39,12 @@ dependencies {
     implementation 'com.github.siyamed:android-shape-imageview:0.9.3'
     implementation 'com.jakewharton:butterknife:8.8.1'
     kapt 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile files('libs/jg_filter_sdk_1.1.jar')
+    compile files('libs/mid-core-sdk-3.7.2.jar')
+    compile files('libs/wup-1.0.0.E-SNAPSHOT.jar')
+    compile files('libs/Xg_sdk_v3.1_20170417_0946.jar')
+    compile files('libs/zxing.jar')
+    compile files('libs/Amap_2DMap_V4.2.0_20170120.jar')
+    compile files('libs/AMap_Location_V3.3.0_20170118.jar')
+    compile files('libs/alipaySdk-20151112.jar')
 }

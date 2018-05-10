@@ -806,6 +806,7 @@ object UIUtil {
                 true)
     }
 
+    @JvmStatic
     fun isfastdoubleClick(): Boolean {
         val time = System.currentTimeMillis()
         val timeD = time - lastclickTime

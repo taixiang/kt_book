@@ -26,7 +26,7 @@ class MyPublishFragment : BaseFragment(), DataView {
 
 
     @BindView(R.id.listview)
-    internal var listView: ListView? = null
+    lateinit var listView: ListView
 
     override val fragmentTitle: String
         get() = ""
